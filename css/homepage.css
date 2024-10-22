@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e1e1e; /* ダークテーマの背景 */
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a1b9a, #4b0f6c); /* 紫のグラデーション */
+  position: fixed;
+  left: -220px; /* 最初は非表示 */
+  transition: left 0.3s ease;
+  padding: 20px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.sidebar.active {
+  left: 0; /* 表示する位置 */
+}
+
+.toggle-button {
+  background-color: #FF8C00; /* ダークテーマのオレンジ */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 0px;
+  left: 100%; /* ボタンがサイドバーの外に配置 */
+  transform: translateX(-100%); /* ボタンを左にずらす */
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: #FFA500; /* ホバー時の色 */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 20px 0;
+}
+
+nav ul li a {
+  color: white; /* ダークテーマの文字色 */
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #FF8C00; /* オレンジ */
+  color: #1e1e1e;
+}
+
+.content {
+  margin-left: 30px; /* サイドバーの幅分だけ余白を取る */
+  padding: 20px;
+}
+
+button#themeToggle {
+  background-color: #FF8C00; /* ダークパープル */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button#themeToggle:hover {
+  background-color: #aa5a24; /* ホバー時の色 */
+}
+
+/* ライトテーマ用のスタイル */
+.light-theme {
+  background-color: #f0f0f0; /* ライトテーマの背景 */
+  color: black;
+}
+
+.light-theme .sidebar {
+  background: linear-gradient(135deg, #ff4c4c, #ff6b6b); /* ライトテーマの赤グラデーション */
+}
+
+.light-theme .toggle-button {
+  background-color: #0000ff; /* ライトテーマの青 */
+}
+
+.light-theme nav ul li a {
+  color: white; /* ライトテーマの文字色 */
+}
+
+.light-theme nav ul li a:hover {
+  background-color: #0000ff; /* ホバー時の青 */
+  color: #f0f0f0;
+}
+
+.light-theme button#themeToggle {
+  background-color: #0000ff; /* ライトテーマの赤 */
+  color: white;
+}
+
+.light-theme button#themeToggle:hover {
+  background-color: #4539e6; /* ホバー時の色 */
+}
