@@ -115,3 +115,7 @@ button#themeToggle:hover {
 .light-theme button#themeToggle:hover {
   background-color: #4539e6; /* ホバー時の色 */
 }
+
+.sidebarH h2 {
+  color: white;
+}
