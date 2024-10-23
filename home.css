@@ -1,8 +1,7 @@
-/*ダークモード*/
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #1e1e1e; /* 背景 */
+  background-color: #1e1e1e; /* ダークテーマの背景 */
   color: white;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -10,20 +9,21 @@ body {
 .sidebar {
   width: 220px;
   height: 100vh;
-  background: linear-gradient(135deg, #6a1b9a, #4b0f6c); /* グラデ */
+  background: linear-gradient(135deg, #6a1b9a, #4b0f6c); /* 紫のグラデーション */
   position: fixed;
-  left: -215px; 
-  transition: left 0.3s ease;
+  left: -215px; /* 最初は非表示 */
+  transition: left 0.4s ease;
+  border-radius: 5px;
   padding: 20px;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.6);
 }
 
 .sidebar.active {
-  left: 0; /* 表示位置 */
+  left: 0; /* 表示する位置 */
 }
 
 .toggle-button {
-  background-color: #FF8C00; 
+  background-color: #FF8C00; /* ダークテーマのオレンジ */
   color: white;
   border: none;
   padding: 10px 15px;
@@ -31,10 +31,10 @@ body {
   font-size: 20px;
   position: absolute;
   top: 0px;
-  left: 100%; 
-  transform: translateX(-100%);
+  left: 100%; /* ボタンがサイドバーの外に配置 */
+  transform: translateX(-100%); /* ボタンを左にずらす */
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
 }
 
 .toggle-button:hover {
@@ -49,74 +49,74 @@ nav ul {
 nav ul li {
   margin: 20px 0;
 }
-/*ダークテーマの文字設定*/
+
 nav ul li a {
-  color: white;
+  color: white; /* ダークテーマの文字色 */
   text-decoration: none;
   font-size: 18px;
   padding: 10px;
   display: block;
   border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.5s, color 0.5s;
 }
-/*ホバー時*/
+
 nav ul li a:hover {
-  background-color: #FF8C00; 
+  background-color: #FF8C00; /* オレンジ */
   color: #1e1e1e;
 }
 
 .content {
-  margin-left: 30px;
+  margin-left: 30px; /* サイドバーの幅分だけ余白を取る */
   padding: 20px;
 }
-/*ボタンの設定*/
+
 button#themeToggle {
-  background-color: #FF8C00;
+  background-color: #FF8C00; /* ダークパープル */
   color: white;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 16px;
   border-radius: 5px;
-  transition: background-color 0.3s;
-}
-/*ホバー時*/
-button#themeToggle:hover {
-  background-color: #aa5a24;
+  transition: background-color 0.5s;
 }
 
-/* ライトモード */
+button#themeToggle:hover {
+  background-color: #aa5a24; /* ホバー時の色 */
+}
+
+/* ライトテーマ用のスタイル */
 .light-theme {
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0; /* ライトテーマの背景 */
   color: black;
 }
 
 .light-theme .sidebar {
-  background: linear-gradient(135deg, #ff4c4c, #ff6b6b); 
+  background: linear-gradient(135deg, #ff4c4c, #ff6b6b); /* ライトテーマの赤グラデーション */
 }
 
 .light-theme .toggle-button {
-  background-color: #0000ff;
+  background-color: #0000ff; /* ライトテーマの青 */
 }
-/*文字色*/
+
 .light-theme nav ul li a {
-  color: white; 
+  color: white; /* ライトテーマの文字色 */
 }
-/*ホバー時*/
+
 .light-theme nav ul li a:hover {
-  background-color: #0000ff; 
+  background-color: #0000ff; /* ホバー時の青 */
   color: #f0f0f0;
 }
 
 .light-theme button#themeToggle {
-  background-color: #0000ff; 
+  background-color: #0000ff; /* ライトテーマの赤 */
   color: white;
 }
-/*ホバー時の色*/
+
 .light-theme button#themeToggle:hover {
-  background-color: #4539e6; 
+  background-color: #4539e6; /* ホバー時の色 */
 }
-/*h2設定*/
+
 .sidebarH h2{
   color: white;
 }
